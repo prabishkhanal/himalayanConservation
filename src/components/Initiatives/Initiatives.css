@@ -1,0 +1,194 @@
+.initiatives-section {
+  background-color: var(--bg-primary);
+  padding: 100px 0;
+}
+
+.initiative-card {
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.initiative-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.initiative-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.initiative-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.initiative-card:hover .initiative-image img {
+  transform: scale(1.1);
+}
+
+.icon-overlay {
+  position: absolute;
+  bottom: -25px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-medium);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.card-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.goals-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.goals-section h5 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.goals-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goals-section li {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.goals-section li i {
+  color: var(--primary-medium);
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.card-footer {
+  background: transparent;
+  border-top: 1px solid var(--border-light);
+  padding: 1.5rem;
+}
+
+.btn-learn-more {
+  background: transparent;
+  color: var(--primary-medium);
+  border: 2px solid var(--primary-medium);
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-learn-more:hover {
+  background: var(--primary-medium);
+  color: var(--text-light);
+}
+
+.btn-learn-more i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-learn-more:hover i {
+  transform: translateX(5px);
+}
+
+.get-involved {
+  margin-top: 80px;
+  padding: 60px;
+  background: linear-gradient(45deg, var(--primary-dark), var(--primary-medium));
+  border-radius: 20px;
+  color: var(--text-light);
+}
+
+.get-involved h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.get-involved p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.get-involved .btn {
+  background: var(--accent-medium);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.get-involved .btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+.get-involved .btn i {
+  margin-left: 10px;
+}
+
+@media (max-width: 991px) {
+  .initiative-card {
+    margin-bottom: 30px;
+  }
+  
+  .get-involved {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .initiatives-section {
+    padding: 60px 0;
+  }
+  
+  .initiative-image {
+    height: 200px;
+  }
+  
+  .get-involved {
+    margin-top: 40px;
+    padding: 30px 15px;
+  }
+  
+  .get-involved h3 {
+    font-size: 1.75rem;
+  }
+}

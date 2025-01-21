@@ -1,0 +1,48 @@
+:root {
+  /* Primary Colors */
+  --primary-dark: #1a2a6c;
+  --primary-medium: #2a4cad;
+  --primary-light: #4169e1;
+
+  /* Secondary Colors */
+  --secondary-dark: #b21f1f;
+  --secondary-medium: #e74c3c;
+  --secondary-light: #ff6b6b;
+
+  /* Accent Colors */
+  --accent-dark: #fdbb2d;
+  --accent-medium: #ffd700;
+  --accent-light: #ffe666;
+
+  /* Neutral Colors */
+  --neutral-dark: #2c3e50;
+  --neutral-medium: #6c757d;
+  --neutral-light: #f8f9fa;
+
+  /* Background Colors */
+  --bg-primary: var(--neutral-light);
+  --bg-secondary: #ffffff;
+  --bg-dark: rgba(0, 0, 0, 0.9);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  /* Text Colors */
+  --text-primary: var(--neutral-dark);
+  --text-secondary: var(--neutral-medium);
+  --text-light: #ffffff;
+
+  /* Button Colors */
+  --btn-primary: var(--primary-medium);
+  --btn-primary-hover: var(--primary-dark);
+  --btn-secondary: var(--secondary-medium);
+  --btn-secondary-hover: var(--secondary-dark);
+
+  /* Border Colors */
+  --border-light: #dee2e6;
+  --border-medium: #ced4da;
+  --border-dark: var(--neutral-medium);
+
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+}
