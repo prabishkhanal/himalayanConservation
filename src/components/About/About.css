@@ -1,5 +1,7 @@
 .about-section {
   background-color: var(--bg-secondary);
+  min-height: 100vh;
+  position: relative;
   padding: 100px 0;
 }
 
@@ -13,7 +15,9 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
-
+.about-section .section-title {
+  margin-bottom: 60px;
+}
 .about-content p {
   color: var(--text-secondary);
   margin-bottom: 30px;

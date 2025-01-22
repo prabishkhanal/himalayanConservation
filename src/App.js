@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
@@ -13,6 +13,7 @@ import Initiatives from './components/Initiatives/Initiatives';
 import Team from './components/Team/Team';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 // Legal Pages
 import TermsOfUse from './components/Legal/TermsOfUse';
@@ -25,9 +26,13 @@ import DMCA from './components/Legal/DMCA';
 import FAQ from './components/Legal/FAQ';
 
 function App() {
+  // Only use basename in production (GitHub Pages) and development
+  const basename = '/himalayan-conservation';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
+        <ScrollToTop />
         <Navigation />
         <Routes>
           <Route path="/" element={

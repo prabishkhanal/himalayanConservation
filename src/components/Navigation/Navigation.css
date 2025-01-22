@@ -14,14 +14,14 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
+.navbar-custom .navbar-brand {
   color: var(--text-light) !important;
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-.nav-link {
+.navbar-custom .nav-link {
   color: var(--text-light) !important;
   font-weight: 500;
   padding: 0.5rem 1rem !important;
@@ -32,13 +32,13 @@
   opacity: 0.9;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
   color: var(--primary-light) !important;
   opacity: 1;
 }
 
-.nav-link::after {
+.navbar-custom .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
@@ -50,50 +50,27 @@
   transform: translateX(-50%);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 70%;
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+  width: 100%;
 }
 
-.navbar-toggler {
-  border: none;
-  padding: 0.25rem 0.5rem;
+.navbar-custom .navbar-toggler {
+  border-color: var(--text-light);
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .navbar-custom {
-    background: var(--neutral-dark);
-    padding: 0.5rem 0;
+    background: var(--neutral-dark) !important;
   }
-
-  .navbar-collapse {
+  
+  .navbar-custom .navbar-collapse {
     background: var(--neutral-dark);
     padding: 1rem;
     border-radius: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .nav-link {
-    padding: 0.75rem 1rem !important;
-    border-radius: 0.25rem;
-  }
-
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 0;
-  }
-
-  .nav-link:hover,
-  .nav-link.active {
-    background: rgba(255, 255, 255, 0.1);
   }
 }

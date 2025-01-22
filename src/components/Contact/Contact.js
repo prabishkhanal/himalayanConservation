@@ -159,18 +159,34 @@ const Contact = () => {
             <div className="social-connect text-center">
               <h3>Connect With Us</h3>
               <div className="social-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <button
+                  className="social-button"
+                  onClick={() => window.open('https://facebook.com/HimalayanConservation', '_blank')}
+                  aria-label="Facebook"
+                >
                   <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                </button>
+                <button
+                  className="social-button"
+                  onClick={() => window.open('https://twitter.com/HimalayanConserv', '_blank')}
+                  aria-label="Twitter"
+                >
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                </button>
+                <button
+                  className="social-button"
+                  onClick={() => window.open('https://instagram.com/himalayan.conservation', '_blank')}
+                  aria-label="Instagram"
+                >
                   <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                </button>
+                <button
+                  className="social-button"
+                  onClick={() => window.open('https://linkedin.com/company/himalayan-conservation', '_blank')}
+                  aria-label="LinkedIn"
+                >
                   <i className="fab fa-linkedin-in"></i>
-                </a>
+                </button>
               </div>
             </div>
           </Col>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Events  } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
@@ -14,8 +14,17 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    // Initialize react-scroll events
+    Events.scrollEvent.register('begin', () => {});
+    Events.scrollEvent.register('end', () => {});
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Clean up react-scroll events
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
   }, []);
 
   const navItems = [
@@ -30,28 +39,36 @@ const Navigation = () => {
   const renderNavLink = (item) => {
     if (isHomePage) {
       return (
-        <ScrollLink
-          key={item.to}
+        <Nav.Link
+          as={ScrollLink}
           to={item.to}
           spy={true}
           smooth={true}
-          offset={-70}
+          offset={-65}
           duration={500}
           className="nav-link"
           activeClass="active"
         >
           {item.name}
-        </ScrollLink>
+        </Nav.Link>
       );
     } else {
       return (
-        <RouterLink
-          key={item.to}
-          to={`/#${item.to}`}
+        <Nav.Link
+          as={RouterLink}
+          to="/"
           className="nav-link"
+          onClick={() => {
+            setTimeout(() => {
+              const element = document.getElementById(item.to);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100);
+          }}
         >
           {item.name}
-        </RouterLink>
+        </Nav.Link>
       );
     }
   };
@@ -69,9 +86,9 @@ const Navigation = () => {
       className={navbarClasses}
     >
       <Container>
-        <RouterLink to="/" className="navbar-brand">
+        <Navbar.Brand as={RouterLink} to="/">
           Himalayan Conservation
-        </RouterLink>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link as ScrollLink } from 'react-scroll';
 import './Home.css';
 
 const Home = () => {
@@ -18,9 +19,16 @@ const Home = () => {
               <p className="text-white mb-5 animate__animated animate__fadeInUp">
                 Join us in our mission to conserve the Himalayan ecosystem, support local communities, and promote sustainable practices
               </p>
-              <a href="#about" className="btn btn-primary btn-lg animate__animated animate__fadeInUp">
-                Discover Our Mission
-              </a>
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="btn btn-primary btn-lg animate__animated animate__fadeInUp"
+              >
+                Learn More
+              </ScrollLink>
             </Col>
           </Row>
         </Container>

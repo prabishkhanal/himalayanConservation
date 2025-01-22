@@ -52,25 +52,38 @@ const Footer = () => {
     { name: 'FAQ', path: '/faq' }
   ];
 
-  const renderQuickLink = (link) => {
+  const renderQuickLink = (item) => {
     if (isHomePage) {
       return (
         <ScrollLink
-          to={link.to}
+          to={item.to}
           spy={true}
           smooth={true}
+          offset={-70}
           duration={500}
           className="footer-link"
         >
-          <i className="fas fa-chevron-right"></i> {link.name}
+          {item.name}
         </ScrollLink>
       );
+    } else {
+      return (
+        <RouterLink
+          to="/"
+          className="footer-link"
+          onClick={() => {
+            setTimeout(() => {
+              const element = document.getElementById(item.to);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100);
+          }}
+        >
+          {item.name}
+        </RouterLink>
+      );
     }
-    return (
-      <RouterLink to={`/#${link.to}`} className="footer-link">
-        <i className="fas fa-chevron-right"></i> {link.name}
-      </RouterLink>
-    );
   };
 
   const renderInitiativeLink = (initiative) => {
@@ -125,9 +138,11 @@ const Footer = () => {
             <Col lg={3} md={6} className="mb-4 mb-lg-0">
               <div className="footer-links">
                 <h4>Quick Links</h4>
-                <ul>
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>{renderQuickLink(link)}</li>
+                <ul className="footer-links">
+                  {quickLinks.map((link) => (
+                    <li key={link.to}>
+                      {renderQuickLink(link)}
+                    </li>
                   ))}
                 </ul>
               </div>
