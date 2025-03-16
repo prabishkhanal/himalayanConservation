@@ -2,7 +2,7 @@
   "name": "himalayan-conservation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/himalayan-conservation",
+  "homepage": "https://prabishkhanal.github.io/himalayanConservation",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@testing-library/jest-dom": "^5.16.5",
