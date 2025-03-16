@@ -9,7 +9,7 @@ const DMCA = () => {
         <h1>DMCA Policy</h1>
         <div className="legal-content">
           <h2>Digital Millennium Copyright Act Notice</h2>
-          <p>Himalayan Conservation respects the intellectual property rights of others and expects its users to do the same.</p>
+          <p>The Himalayan Conservancy respects the intellectual property rights of others and expects its users to do the same.</p>
 
           <h2>Reporting Copyright Infringement</h2>
           <p>To file a copyright infringement notification with us, you will need to send a written communication that includes:</p>
@@ -35,7 +35,7 @@ const DMCA = () => {
           <h2>Contact Information</h2>
           <p>Send DMCA notices to:</p>
           <p>Copyright Agent<br />
-          Himalayan Conservation<br />
+          The Himalayan Conservancy<br />
           [Address]<br />
           Email: copyright@himalayanconservation.org</p>
         </div>

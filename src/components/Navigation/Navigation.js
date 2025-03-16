@@ -1,17 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link as ScrollLink, Events  } from 'react-scroll';
+import { Link as ScrollLink, Events } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Check which section is currently in view
+      if (isHomePage) {
+        const sections = ['home', 'about', 'projects', 'events', 'news', 'resources', 'library', 'donate'];
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+              setActiveSection(section);
+              break;
+            }
+          }
+        }
+      }
     };
 
     // Initialize react-scroll events
@@ -25,16 +41,26 @@ const Navigation = () => {
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
     };
-  }, []);
+  }, [isHomePage]);
 
   const navItems = [
     { name: 'Home', to: 'home' },
-    { name: 'Programs', to: 'programs' },
     { name: 'About Us', to: 'about' },
-    { name: 'Initiatives', to: 'initiatives' },
-    { name: 'Our Team', to: 'team' },
-    { name: 'Contact', to: 'contact' }
+    { name: 'Our Projects', to: 'projects' },
+    { name: 'Events', to: 'events' },
+    { name: 'News', to: 'news' },
+    { name: 'Resources', to: 'resources' },
+    { name: 'Library', to: 'library' },
+    { name: 'Donate', to: 'donate' }
   ];
+
+  // Function to determine if a nav item should be active
+  const isNavItemActive = (item) => {
+    if (item.to === 'about' && (activeSection === 'about' || activeSection === 'team')) {
+      return true;
+    }
+    return activeSection === item.to;
+  };
 
   const renderNavLink = (item) => {
     if (isHomePage) {
@@ -46,7 +72,7 @@ const Navigation = () => {
           smooth={true}
           offset={-65}
           duration={500}
-          className="nav-link"
+          className={`nav-link ${isNavItemActive(item) ? 'active' : ''}`}
           activeClass="active"
         >
           {item.name}
@@ -87,7 +113,7 @@ const Navigation = () => {
     >
       <Container>
         <Navbar.Brand as={RouterLink} to="/">
-          Himalayan Conservation
+          The Himalayan Conservancy
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

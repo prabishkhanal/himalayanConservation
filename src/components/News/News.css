@@ -1,0 +1,38 @@
+.news-section {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.news-card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.btn-read-more {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .news-section {
+    padding: 60px 0;
+  }
+}

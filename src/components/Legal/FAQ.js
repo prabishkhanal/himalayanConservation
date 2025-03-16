@@ -5,7 +5,7 @@ import './Legal.css';
 const FAQ = () => {
   const faqs = [
     {
-      question: "How can I get involved with Himalayan Conservation?",
+      question: "How can I get involved with The Himalayan Conservancy?",
       answer: "There are several ways to get involved: volunteer for our programs, make a donation, participate in our events, or spread awareness about our cause through social media."
     },
     {

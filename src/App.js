@@ -7,11 +7,13 @@ import './App.css';
 // Main Components
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
-import Programs from './components/Programs/Programs';
 import About from './components/About/About';
-import Initiatives from './components/Initiatives/Initiatives';
-import Team from './components/Team/Team';
-import Contact from './components/Contact/Contact';
+import Projects from './components/Projects/Projects';
+import Events from './components/Programs/Events';
+import News from './components/News/News';
+import Resources from './components/Resources/Resources';
+import Library from './components/Library/Library';
+import Donate from './components/Donate/Donate';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
@@ -38,11 +40,13 @@ function App() {
           <Route path="/" element={
             <>
               <Home />
-              <Programs />
               <About />
-              <Initiatives />
-              <Team />
-              <Contact />
+              <Projects />
+              <Events />
+              <News />
+              <Resources />
+              <Library />
+              <Donate />
             </>
           } />
           <Route path="/terms-of-use" element={<TermsOfUse />} />

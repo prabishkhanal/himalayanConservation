@@ -1,6 +1,6 @@
-# Himalayan Conservation Initiative
+# The Himalayan Conservancy Initiative
 
-A React-based website for the Himalayan Conservation project, focused on preserving the rich biodiversity and cultural heritage of the Himalayan region.
+A React-based website for the The Himalayan Conservancy project, focused on preserving the rich biodiversity and cultural heritage of the Himalayan region.
 
 ## Getting Started
 

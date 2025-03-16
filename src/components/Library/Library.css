@@ -1,0 +1,30 @@
+.library-section {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.library-item {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.library-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+  .library-section {
+    padding: 60px 0;
+  }
+}

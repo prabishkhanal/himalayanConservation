@@ -114,7 +114,7 @@ const Footer = () => {
           <Row>
             <Col lg={3} md={6} className="mb-4 mb-lg-0">
               <div className="footer-info">
-                <h3>Himalayan Conservation</h3>
+                <h3>The Himalayan Conservancy</h3>
                 <p className="about-text">
                   Dedicated to preserving the rich biodiversity and cultural heritage 
                   of the Himalayan region through sustainable conservation practices 
@@ -205,7 +205,7 @@ const Footer = () => {
           <Row>
             <Col className="text-center">
               <div className="copyright">
-                &copy; {currentYear} <strong>Himalayan Conservation</strong>. All Rights Reserved
+                &copy; {currentYear} <strong>The Himalayan Conservancy</strong>. All Rights Reserved
               </div>
             </Col>
           </Row>

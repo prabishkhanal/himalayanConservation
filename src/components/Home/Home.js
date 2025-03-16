@@ -11,7 +11,7 @@ const Home = () => {
           <Row className="align-items-center min-vh-100">
             <Col md={8} className="text-center mx-auto">
               <h1 className="display-3 text-white mb-4 animate__animated animate__fadeInDown">
-                Himalayan Conservation Initiative
+                The Himalayan Conservancy Initiative
               </h1>
               <p className="lead text-white mb-5 animate__animated animate__fadeInUp">
                 Protecting the Sacred Mountains, Preserving Our Heritage

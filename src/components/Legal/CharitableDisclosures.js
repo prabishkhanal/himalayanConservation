@@ -9,7 +9,7 @@ const CharitableDisclosures = () => {
         <h1>Charitable Solicitation Disclosures</h1>
         <div className="legal-content">
           <h2>Registration Information</h2>
-          <p>Himalayan Conservation is a registered non-profit organization in Nepal. Our registration number is [Registration Number].</p>
+          <p>The Himalayan Conservancy is a registered non-profit organization in Nepal. Our registration number is [Registration Number].</p>
 
           <h2>Financial Information</h2>
           <p>We are committed to transparency in our financial operations. Our annual reports and financial statements are available upon request.</p>
@@ -22,7 +22,7 @@ const CharitableDisclosures = () => {
 
           <h2>Contact Information</h2>
           <p>For additional information about our charitable solicitation practices, please contact:</p>
-          <p>Himalayan Conservation<br />
+          <p>The Himalayan Conservancy<br />
           [Address]<br />
           Phone: [Phone Number]<br />
           Email: info@himalayanconservation.org</p>

@@ -9,7 +9,7 @@ const Nondiscrimination = () => {
         <h1>Notice of Nondiscrimination</h1>
         <div className="legal-content">
           <h2>Our Commitment</h2>
-          <p>Himalayan Conservation is committed to providing an inclusive and welcoming environment for all members of our staff, volunteers, partners, and the communities we serve.</p>
+          <p>The Himalayan Conservancy is committed to providing an inclusive and welcoming environment for all members of our staff, volunteers, partners, and the communities we serve.</p>
 
           <h2>Nondiscrimination Policy</h2>
           <p>We do not discriminate on the basis of:</p>
